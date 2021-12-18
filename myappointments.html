@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Appointments</title>
+    <link rel="shortcut icon" href="/Images/judge_hammer.png" type="image/png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container">
+            <a href="" class="navbar-brand">WAKILI</a>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="" class="nav-link text-light" id="username"></a>
+                </li>
+
+                <li class="nav-item">
+                    <img id="usernameimg" src="/Images/user (1).png"  class="img-fluid">
+                </li>
+
+                <li class="nav-item">
+                    <i class="fas fa-sort-down h1 text-light"></i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <section class="appointholder">
+        <div class="iconsandheadings d-flex flex-column text-light">
+        <div><i class="fas fa-home h3 mx-3 mt-5 mb-4"></i><span >Dashboard</span></div>
+        <div><i class="fas fa-calendar-plus h3 mx-3 mb-4"></i><span >Book an Appointment</span></div>
+        <div><i class="far fa-address-card h3 mx-3 mb-4"></i><span >Appointments</span></div>
+        <div><i class="fas fa-plus h3 mx-3 mb-4"></i><span >Submit a newcase</span></div>
+        <div><i class="fas fa-book-reader h3 mx-3 mb-4"></i><span >My case</span></div>
+        <div><i class="fas fa-folder h3 mx-3 mb-4"></i><span >My files</span></div>
+        <div><i class="fas fa-user-check h3 mx-3 mb-4"></i><span >Refer a client</span></div>
+        <div><i class="fas fa-money-check-alt h3 mx-3 mb-4"></i><span >Transaction</span></div>
+        <div><i class="fas fa-envelope h3 mx-3 mb-3"></i><span >Messaging</span></div>
+        </div>
+        
+        <div class="appointments">
+            <div class="container">
+                <h1 class="p-2">My Appointments</h1>
+                <div class="d-flex justify-content-end">
+                    <div style="width: 70vh;"><input type="text" class="form-control mb-3" placeholder="Search for anything"></div>
+                    <buttton class="btn btn-primary mb-3">Search</buttton>
+                </div>
+                
+    
+                <table class="table bg-dark text-light table-striped"> 
+                    <thead>
+                        <tr>
+                            <th>Date and time</th>
+                            <th>Type of cases</th>
+                            <th>Appointment type</th>
+                            <th>Status</th>
+                            <th>Assigned Lawyer</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="myappointments">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    
+    </section>
+
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+
+<script src="/js/config.js"></script>
+<script src="/js/myappointments.js"></script>
+</body>
+</html>

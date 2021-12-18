@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit New Case</title>
+    <link rel="shortcut icon" href="/Images/judge_hammer.png" type="image/png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container">
+            <a href="" class="navbar-brand">WAKILI</a>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="" class="nav-link text-light" id="username"></a>
+                </li>
+
+                <li class="nav-item">
+                    <img id="usernameimg" src="/Images/user (1).png"  class="img-fluid">
+                </li>
+
+                <li class="nav-item">
+                    <i class="fas fa-sort-down h1 text-light"></i>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="submit">
+        <div  class="iconsandheadings d-flex flex-column text-light">
+            <div class="container">
+            <div><i class="fas fa-home h3 mx-3 mt-5 mb-4"></i><span >Dashboard</span></div>
+            <div><i class="fas fa-calendar-plus h3 mx-3 mb-4"></i><span >Book an Appointment</span></div>
+            <div><i class="far fa-address-card h3 mx-3 mb-4"></i><span >Appointments</span></div>
+            <div><i class="fas fa-plus h3 mx-3 mb-4"></i><span >Submit a newcase</span></div>
+            <div><i class="fas fa-book-reader h3 mx-3 mb-4"></i><span >My case</span></div>
+            <div><i class="fas fa-folder h3 mx-3 mb-4"></i><span >My files</span></div>
+            <div><i class="fas fa-user-check h3 mx-3 mb-4"></i><span >Refer a client</span></div>
+            <div><i class="fas fa-money-check-alt h3 mx-3 mb-4"></i><span >Transaction</span></div>
+            <div><i class="fas fa-envelope h3 mx-3 mb-3"></i><span >Messaging</span></div>
+            </div>
+        </div>
+
+        
+        <div class="submitcase overflow-scroll">
+            <div class="container">
+                <h5 class="p-3">Submit a Case</h5>
+                <select class="form-select m-3" name="" id="casetype">
+                    <option>Select type of case</option>
+                    <option value="Maritime Law">Maritime Law</option>
+                    <option value="Commercial Law">Commercial Law</option>
+                    <option value="Criminal Law">Criminal Law</option>
+                </select>
+
+                <div class="m-3"><label for="fileinput" class="mb-3">Attach documents in one Pdf</label><input type="file" class="form-control" id="fileinput" multiple></div>
+                <h5 class="m-3" id="progressbar"></h5>
+                <p class="lead m-3">Are you a plaintiff or a respondent ?</p>
+                <div class="m-3"><input class="form-check-input mx-3" type="radio" name="check" id="plaintiff"><label class="form-check-label " for="plaintiff">Plaintiff</label></div>
+                
+                <div class="m-3"><input class="form-check-input mx-3"  type="radio" name="check" id="respondent"><label class="form-check-label" for="respondent">Respondent</label></div>
+                <textarea class="form-control m-3" name="" id="casedesc" cols="10" rows="10" placeholder="Case Description"></textarea>
+
+                <button class="btn btn-primary m-3" id="submitcase">SUBMIT</button>
+                <button class="btn btn-primary" type="button" id="submitting" style="display: none;" disabled>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    SUBMITING...
+                  </button>
+            </div>
+        </div>
+            
+
+    </section>
+
+
+
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+
+        <script src="/js/config.js"></script>
+        <script src="/js/submitcase.js"></script>
+</body>
+</html>

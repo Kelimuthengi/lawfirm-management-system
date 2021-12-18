@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR</title>
+    <link rel="shortcut icon" href="/Images/judge_hammer.png" type="image/png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container">
+            <a href="" class="navbar-brand">WAKILI</a>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="" class="nav-link text-light" id="username"></a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <i class="fas fa-sort-down h1 text-light" role="button" data-bs-toggle="dropdown" id="userdropdown" aria-expanded="true"></i>
+                    <ul class="dropdown-menu" aria-labelledby="userdropdown">
+                        <li><a href="#" class="dropdown-item" id="logout">Log Out</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <img src="" alt=""  class="img-fluid">
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="hr">
+        <div class="iconsandheadings d-flex flex-column text-light">
+            <div><i class="fas fa-home h3 mx-3 mt-5 mb-4"></i><span >Dashboard</span></div>
+            <div><i class="fas fa-calendar-plus h3 mx-3 mb-4"></i><span >Appointments</span></div>
+            <div><i class="fas fa-plus h3 mx-3 mb-4"></i><span >All cases</span></div>
+            <a href="addemployeehr.html" class="text-decoration-none"><i class="fas fa-book-reader h3 mx-3 mb-4 text-light"></i><span >HR</span></a>
+            <div><i class="fas fa-folder h3 mx-3 mb-4"></i><span >Finance</span></div>
+            <div><i class="fas fa-user-check h3 mx-3 mb-4"></i><span >Files</span></div>
+            <div><i class="fas fa-money-check-alt h3 mx-3 mb-4"></i><span >Clients</span></div>
+            <div><i class="fas fa-money-check-alt h3 mx-3 mb-4"></i><span >Referred Clients</span></div>
+            <div><i class="fas fa-envelope h3 mx-3 mb-3"></i><span >Messaging</span></div>
+        </div>
+
+        <div class="adminhr overflow-scroll">
+            <div class="container mx-3 mt-3">
+                <h3>Enter Employee Details</h3>
+                <input type="text" id="name" placeholder="Enter your Name" class="form-control mb-2 mt-2">
+                <label for="" class="form-label">Enter Date of Birth</label>
+                <input type="date" id="dob" placeholder="" class="form-control mb-2">
+                <input type="text" id="department" placeholder="Enter Department" class="form-control mb-2">
+                <input type="text" id="portifolio" placeholder="Enter Portifolio" class="form-control mb-2">
+                <div class="d-flex"><div><i class="fas fa-camera h1 text-warning"></i></div> <div><label for="passportPhoto" class="mx-1" id="passlabel">Upload Image</label><p id="progress" class="mx-1"></p></div></div>
+                <input type="file" id="passportPhoto" accept="image/*"  style="display: none;" class="form-control mb-2">
+                <input type="text" id="qualification"  placeholder="Enter Qualifications" class="form-control mb-2">
+                <input type="text" id="salary" placeholder="Enter Salary" class="form-control mb-2">
+                <input type="text" id="nok" placeholder="Enter Next of Kin" class="form-control mb-2">
+                <input type="text" id="nokContact" placeholder="Enter Next of Kin Contact" class="form-control mb-2">
+                <input type="text" id="contact" placeholder="Enter Employee Contact" class="form-control mb-2">
+                <input type="email" id="email" placeholder="Enter Employee Email" class="form-control mb-2">
+                <input type="password" id="password" placeholder="Enter Employee password" class="form-control mb-2">
+                <select class="form-select mb-2" name="" id="UserType" >
+                    <option>Select UserType</option>
+                    <option value="Lawyer">Lawyer</option>
+                    <option value="Staff">Staff</option>
+                    <option value="Support Stuff">Support Stuff</option>
+                    <option value="Receptionist">Receptionist</option>
+                </select>
+                <label for="">Enter Employment Date</label>
+                <input type="date" id="employmentdate" placeholder="" class="form-control mb-2">
+                <input type="text" id="previousemployeer" placeholder="Enter Previous Employer" class="form-control mb-2">
+                <input type="text" id="experience" placeholder="Enter Experience" class="form-control mb-2">
+                <input type="text" id="warning" placeholder="Enter Warnings" class="form-control mb-2">
+
+                <button class="btn btn-primary mb-2" id="submitemployeebtn">SUBMIT</button>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
+
+    <script src="/js/config.js"></script>
+    <script src="/js/addemployeehr.js"></script>
+</body>
+</html>
