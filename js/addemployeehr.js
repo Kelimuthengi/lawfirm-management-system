@@ -1,5 +1,5 @@
 firebase.auth().onAuthStateChanged((user) => {
-    // console.log(user.uid)
+    alert(user.uid)
     if(user) {
         document.getElementById("submitemployeebtn").onclick = () => {
             let name =  document.getElementById("name").value;
